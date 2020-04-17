@@ -14,12 +14,6 @@ vector<int> solution(vector<int> array, vector<vector<int>> commands) {
 		temp = array;
 		sort(temp.begin() + commands[i][0] - 1, temp.begin() + commands[i][1]);
 		answer.push_back(temp[commands[i][0] + commands[i][2] - 2]);
-
-		for (int j = 0; j < array.size(); j++) {
-			cout << temp[j] << ' ';
-
-		}
-		cout << '\n';
 	}
 	
 	return answer;
